@@ -1,0 +1,178 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+    /*Right joga o mais escuro para a direita*/
+    /*o BODY não é um ID ou uma CLASS, então não precisa do ponto*/
+    /*posso utilizar um gerador de gradiente (https://cssgradient.io/)*/
+}
+
+header{
+    align-items: center;
+    height: 100vh;
+}
+
+.menu{
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu a{
+    color: white;
+    display: block;
+    padding: 15px;
+    transition: background-color 1s, color 1s;
+    text-decoration: none;
+}
+
+.menu a:hover{
+    background-color: rgb(40, 77, 114);
+    text-decoration: underline;
+}
+
+.box{
+    position: absolute;/*faz com que toda a classe BOX seja ajustada dentro dela mesma, ajusta o FIELDSET*/
+    top: 50%;/*centraliza em relação ao topo*/
+    left: 50%;/*centraliza em relação à esquerda*/
+    transform: translate(-50%, -50%);/*com este o formulário ficará totalmente centralizado na página*/
+    background-color: rgba(0, 0, 0, 0.6);/*dar transparência de fundo ao formulário usar o RGB alpha minimo 0 e máximo 1*/
+    padding: 15px;/*aumenta o espaço entre o FIELDSET e a borda do fundo com transparência*/
+    border-radius: 15px;/*vai arredondar as bordas*/
+    width: 50%; /*ajusta a largura de todo o conteúdo da BOX*/
+    color: white;/*altera a cor do texto, só usa ele para texto*/
+}
+
+fieldset{
+    border: 3px solid royalblue /* posso incrementar a borda do FIELDSET ou só acrescentar 
+    a cor border-color: royalblue;*/
+}
+
+#tipo{
+    margin-left: 50px;
+}
+
+#data_cadastro{/*o ID se chama pelo jogo da velha*/
+    border: none;
+    padding: 8px; /*distância entre a DATA e a borda*/
+    border-radius: 10px; /*arredonda as bordas*/
+    outline: none; /*tira a linha ao redor da data*/
+    font-size: 15px;
+    margin-right: 40px;
+}
+
+#data_entrega, #data_compra, #data_validade{
+    margin-right: 40px;
+}
+
+legend{
+    border: 3px solid royalblue;/*o BORDER-COLOR não funciona aqui*/
+    padding: 10px; /*aumenta o espaço da borda em relação a legenda*/
+    text-align: left;/*centraliza a legenda*/
+    background-color: none;/*cor de fundo da legenda*/
+    border-radius: 8px;/*arredonda as bordas da legenda*/
+}
+
+.inputbox{
+    position: relative;/*necessário para quando for criar a animação no labelInput por os nomes na posição 0 conforme o TOP e o LEFT*/
+}
+
+.inputUser{
+    background: none;/*deixa os INPUTS, onde vai a informação, sem fundo*/
+    border: none;/*remove as bordar dos INPUTS*/
+    border-bottom: 1px solid white;/*deixa só a linha para digitar a informação*/
+    outline: none;/*não deixa aparecer a borda ao redor do INPUT quando se clica
+    sem isso, ao clicar, aparece uma borda ao redor*/
+    color: white;/*cor da fonte do que é digitado dentro do input*/
+    font-size: 15px;/*tamanho da fonte*/
+    width: 100%;/*largura das linhas onde digita os inputs*/
+    letter-spacing: 2px;/*espaço entre as letras digitadas*/
+    /*display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;*/
+    position: relative;
+}
+
+#codigo, #cnpj, #telefone, #codigo_barras{
+    width: 30%;
+    margin-left: 20px;
+}
+
+#nome, #endereco{
+    width: 60%;
+}
+
+#produto{
+    width: 60%;
+}
+
+#nota_fiscal, #valor, #quantidade{
+    width: 30%;
+    margin-right: 20px;
+    text-align-last: center;
+}
+
+#quantidade_solicitada, #numero_pedido{
+    width: 30%;
+    margin-right: 20px;
+    text-align-last: center;
+}
+
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;/*qualquer lugar que clicar dentro do input, a ação será executada*/ 
+    transition: .5s;/*tempo da animação dos nomes no INPUT*/
+}
+
+ .inputUser:focus ~ .labelInput,/*quando der um clique no input, quero que execute uma ação no labelInput que é subir e diminuir a letra*/
+ .inputUser:valid ~ .labelInput{/*depois da vírgula, eu quero depois que estiver valido, execute novamente a ação, pois quando clico em outro input o anterior está sendo sobreposto pela label*/
+    top: -20px;
+    font-size: 12px;
+    color: dodgerblue;
+}
+
+ #submit{
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));/*cor de fundo do botão*/
+    padding: 8px;
+    width: 20%;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;/*faz o ponteiro do mouse mudar quando passar por cima*/
+    
+}
+
+ #submit:hover{/*quando passar o mouse por cima do SUBMIT, vai alterar a cor*/
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(31, 147, 201));/*cor de fundo do botão*/
+}
+
+ .inputbotom{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.inputSelect{
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    font-size: 15px;
+}
+
+#selecao{
+    padding: 8px;
+    outline: none;
+}
+
+
+
+
+
