@@ -48,6 +48,18 @@ header{
     color: white;/*altera a cor do texto, só usa ele para texto*/
 }
 
+.inputloginsenha{
+    position: absolute;/*faz com que toda a classe BOX seja ajustada dentro dela mesma, ajusta o FIELDSET*/
+    top: 50%;/*centraliza em relação ao topo*/
+    left: 50%;/*centraliza em relação à esquerda*/
+    transform: translate(-50%, -50%);/*com este o formulário ficará totalmente centralizado na página*/
+    background-color: rgba(0, 0, 0, 0.6);/*dar transparência de fundo ao formulário usar o RGB alpha minimo 0 e máximo 1*/
+    padding: 15px;/*aumenta o espaço entre o FIELDSET e a borda do fundo com transparência*/
+    border-radius: 15px;/*vai arredondar as bordas*/
+    width: auto; /*ajusta a largura de todo o conteúdo da BOX*/
+    color: white;/*altera a cor do texto, só usa ele para texto*/
+}
+
 fieldset{
     border: 3px solid royalblue /* posso incrementar a borda do FIELDSET ou só acrescentar 
     a cor border-color: royalblue;*/
