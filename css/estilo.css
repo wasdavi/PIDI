@@ -48,7 +48,7 @@ header{
     color: white;/*altera a cor do texto, só usa ele para texto*/
 }
 
-.inputloginsenha{
+.loginSenha{
     position: absolute;/*faz com que toda a classe BOX seja ajustada dentro dela mesma, ajusta o FIELDSET*/
     top: 50%;/*centraliza em relação ao topo*/
     left: 50%;/*centraliza em relação à esquerda*/
@@ -58,6 +58,11 @@ header{
     border-radius: 15px;/*vai arredondar as bordas*/
     width: auto; /*ajusta a largura de todo o conteúdo da BOX*/
     color: white;/*altera a cor do texto, só usa ele para texto*/
+}
+
+#login, #senha{
+    width: 25vh;
+
 }
 
 fieldset{
@@ -154,6 +159,21 @@ legend{
     background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));/*cor de fundo do botão*/
     padding: 8px;
     width: 20%;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;/*faz o ponteiro do mouse mudar quando passar por cima*/
+    
+}
+
+ #submit:hover{/*quando passar o mouse por cima do SUBMIT, vai alterar a cor*/
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(31, 147, 201));/*cor de fundo do botão*/
+}
+
+#entrar{
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));/*cor de fundo do botão*/
+    padding: 8px;
+    width: auto;
     border: none;
     color: white;
     font-size: 15px;
