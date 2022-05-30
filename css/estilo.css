@@ -75,7 +75,7 @@ header{
     color: white;/*altera a cor do texto, só usa ele para texto*/
 }
 
-.loginSenha{
+.loginSenha, .aquisicoes{
     position: absolute;/*faz com que toda a classe BOX seja ajustada dentro dela mesma, ajusta o FIELDSET*/
     top: 50%;/*centraliza em relação ao topo*/
     left: 50%;/*centraliza em relação à esquerda*/
@@ -87,12 +87,17 @@ header{
     color: white;/*altera a cor do texto, só usa ele para texto*/
 }
 
-#login, #senha{
+#login, #senha, #data_aquisicao{
     width: 25vh;
     padding: 8px;
 }
 
-.inputLogin{
+#selecaoAquisicao{
+    width: 27vh;
+    padding: 8px;
+}
+
+.inputLogin, .inputAquisicoes{
     padding: 15px;
     color: gray;
 }
@@ -213,7 +218,7 @@ legend{
     padding: 20px;
 }
 
-#entrar{
+#entrar, #salvar_aquisicao{
     background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));/*cor de fundo do botão*/
     padding: 10px;
     width: 20vh;

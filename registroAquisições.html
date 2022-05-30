@@ -29,14 +29,15 @@
                 </ul>
             </nav>
         </header>
-        <div class="box">
+        <div class="aquisicoes">
             <form action="">
                 <fieldset>
                     <legend><b>Registro de Aquisições</b> </legend>
                     <br><br>
-                    <div class="inputbox">
+                    <div class="inputAquisicoes">
                         <label for="">Cenário</label>
-                        <select name="selecao" id="selecao" required>
+                        <br>
+                        <select name="selecao" id="selecaoAquisicao" required>
                             <option value="#"></option>
                             <option value="opcao1">Opção1</option>
                             <option value="opcao2">Opção2</option>
@@ -44,13 +45,14 @@
                         </select>
                     </div>
                     <br><br>
-                    <div class="inputbox">
+                    <div class="inputAquisicoes">
                         <label for="data_aquisicao"><b>Data de Aquisição</b></label>
+                        <br>
                         <input type="date" name="toLocaleDateString" id="data_aquisicao" required>
                         </div>
                     <br><br>
                     <div class="inputbotom">
-                        <input type="submit" name="submit" id="submit" value="Salvar">
+                        <input type="submit" name="submit" id="salvar_aquisicao" value="Salvar">
                     </div>
                 </fieldset>
             </form>
