@@ -30,24 +30,24 @@
                     <br><br>
                     <div class="inputbotom">
                         <a href="cadastroFornecedor.html">
-                        <input type="submit" name="entrar" id="entrar" value="Entrar" onclick="logar()">
+                        <input type="button" name="entrar" id="entrar" value="Entrar">
                         </a>
                     </div>
                 </fieldset>
             </form>
-            <script type="text/javascript">
-                function logar(){
-                    window.location.replace("cadastroFornecedor.html");
-                var login = document.getElementById('login').value;
-                var senha = document.getElementById('senha').value;
-
-                if(login=="adm" && senha=="123"){
-                    window.location.replace("https://www.google.com.br/");
-                }else{
-                    alert("Login ou senha incorretos");
-                }
-                }
-            </script>
-        </div>
+        </div>        
     </body>
+    <!--<script type="text/javascript">
+        function logar(){
+            window.location.replace("cadastroFornecedor.html");
+        var login = document.getElementById('login').value;
+        var senha = document.getElementById('senha').value;
+
+        if(login=="adm" && senha=="123"){
+            window.location.replace("https://www.google.com.br/");
+        }else{
+            alert("Login ou senha incorretos");
+        }
+        }
+    </script>-->
     </html>
