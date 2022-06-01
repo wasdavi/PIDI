@@ -29,7 +29,7 @@
                     </div>
                     <br><br>
                     <div class="inputbotom">
-                        <a href="cadastroFornecedor.html">
+                        <a href="pidi/cadastroFornecedor.php">
                         <input type="button" name="entrar" id="entrar" value="Entrar">
                         </a>
                     </div>

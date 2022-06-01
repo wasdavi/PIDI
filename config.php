@@ -2,7 +2,7 @@
     $dbHost = 'Localhost';
     $dbUsername = 'root';
     $dbPassword = '123456';
-    $dbName = 'formulario-teste';
+    $dbName = 'pidi4';
 
     $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
 

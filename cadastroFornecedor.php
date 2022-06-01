@@ -1,3 +1,29 @@
+<?php
+    //  if(isset($_POST['submit'])){
+    //      print_r($_POST['nome']);
+    //      print_r('<br>');
+    //      print_r($_POST['cnpj']);
+    //      print_r('<br>');
+    //      print_r($_POST['endereco']);
+    //      print_r('<br>');
+    //      print_r($_POST['telefone']);
+    //  }
+
+    include_once('config.php')
+
+     $nome = $_POST['nome'];
+    // $cnpj = $_POST['cnpj'];
+    // $endereco = $_POST['endereco'];
+    // $telefone = $_POST['telefone'];
+    // $data_cadastro = $_POST['data_cadastro'];
+    // $selecao_produto = $_POST['selecao_produto'];
+    // $selecao_transporte = $_POST['selecao_transporte'];
+
+    // $result = mysqli_query($conexao, "INSERT INTO fornecedor('nome','cnpj','endereco','telefone','data_cadastro','selecao_produto','selecao_transporte') VALUES($nome,$cnpj,$endereco,$telefone,$data_cadastro,$selecao_produto,$selecao_transporte)");
+    $result = mysqli_query($conexao, "INSERT INTO fornecedor(nome)");
+    
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -29,7 +55,7 @@
         </nav>
     </header>
     <div class="box">
-        <form action="">
+        <form action="" method="POST">
             <fieldset><!--//agrupar elementos como label-->
                 <legend><b>Cadastro de Fornecedores</b> </legend>
                 <br><br>
@@ -69,7 +95,7 @@
                     <!--<label for="nao">Não</label>-->
                 
                     <label for="" >Tipo de Produto:</label>
-                    <select name="selecao" id="selecao" required>
+                    <select name="selecao_produto" id="selecao_produto" required>
                         <option value="#"></option>
                         <optgroup label="Bebidas">
                             <option value="refrigerante">Refrigerante</option>
@@ -81,7 +107,7 @@
                         </optgroup>
                     </select>
                     <label for="" id="tipo">Tipo de Transporte:</label>
-                    <select name="selecao" id="selecao" required>
+                    <select name="selecao_transporte" id="selecao_transporte" required>
                         <option value="#"></option>
                         <option value="caminhao">Caminhão</option>
                         <option value="van">Van</option>

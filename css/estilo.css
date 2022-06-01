@@ -239,7 +239,7 @@ legend{
     font-size: 15px;
 }
 
-#selecao{
+#selecao, #selecao_produto, #selecao_transporte{
     padding: 8px;
     outline: none;
 }
