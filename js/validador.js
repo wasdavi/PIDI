@@ -10,3 +10,10 @@ function logar(){
     }
 }
 
+function test(){
+    $.ajax({url:"echo.php", success:function(result){
+    $("div").text(result);}
+})
+// alert ("Conexão efetuada com sucesso");
+} 
+
