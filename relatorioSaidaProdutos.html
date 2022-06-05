@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Registro de Pedidos da Cozinha</title>
+    <title>Relatório de Saída de Produtos</title>
     </head>
     <body>
         <header>
@@ -32,15 +32,18 @@
         <div class="box">
             <form action="">
                 <fieldset>
-                    <legend><b>Registro de Pedidos da Cozinha</b> </legend>
+                    <legend><b>Relatório de Saída de Produtos</b> </legend>
                     <br><br>
-                    <div class="inputbox">
-                        <input type="text" name="solicitante" id="solicitante" placeholder="Solicitante" class="inputUser" required>
+                    <div class="inputdatasrelatorio">
+                    <label for="data_inicio"><b>Data de Início</b></label>
+                    <input type="date" name="data_inicio" id="data_inicio" placeholder="Início" required>
+                    <label for="data_fim"><b>Data Fim</b></label>
+                    <input type="date" name="data_fim" id="data_fim" placeholder="Fim" required>
+                    <a href="#" id="lupa"><img src="img/lupa2.png" width="35"></a>
                         <br><br><br><br>
-                        <input type="text" name="numero_pedido" id="numero_pedido" class="inputUser" placeholder="Número do Pedido" required>
-                        <input type="text" name="quantidade_solicitada" id="quantidade_solicitada" placeholder="Quantidade" class="inputUser" required> 
-                        <label for="">Tipo de Produto:</label>
-                        <select name="selecao" id="selecao" required>
+                        <!-- <input type="text" name="relProdEntr" id="relProdEntr" placeholder="Produto" class="inputUser" required>  -->
+                        <label for="" >Produto:</label>
+                        <select name="selecao_produtoRel" id="selecao_produtoRel" required>
                             <option value="#"></option>
                             <optgroup label="Bebidas">
                                 <option value="refrigerante">Refrigerante</option>
@@ -54,7 +57,7 @@
                     </div>
                     <br><br>
                     <div class="inputbotom">
-                        <input type="submit" name="submit" id="submit" value="Confirmar">
+                        <input type="submit" name="submit" id="submit" value="Estatísticas">
                     </div>
                 </fieldset>
             </form>
