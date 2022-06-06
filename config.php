@@ -2,7 +2,7 @@
     $dbHost = 'Localhost';
     $dbUsername = 'root';
     $dbPassword = '123456';
-    $dbName = 'pidi4';
+    $dbName = 'pidi';
 
     $conexao = new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
     

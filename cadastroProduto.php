@@ -11,19 +11,19 @@
         <header>
             <nav class="menu">
                 <ul class="menuFornecedor">
-                    <li><a href="cadastroFornecedor.html">Fornecedor</a>
+                    <li><a href="cadastroFornecedor.php">Fornecedor</a>
                     </li>
-                    <li><a href="cadastroProduto.html">Produtos</a></li>
-                    <li><a href="registroPedidoCozinha.html">Pedidos</a></li>
-                    <li><a href="registroAquisicoes.html">Aquisições</a></li>
+                    <li><a href="cadastroProduto.php">Produtos</a></li>
+                    <li><a href="registroPedidoCozinha.php">Pedidos</a></li>
+                    <li><a href="registroAquisicoes.php">Aquisições</a></li>
                     <li><a href="#">Relatórios</a>
                         <ul>
-                            <li><a href="projecaoAquisicaoProdutos.html">Projeção para Aquisição de Produtos</a></li>
-                            <li><a href="relatorioMonitoramentoAlteracoes.html">Monitoramento de Alterações</a></li>
-                            <li><a href="relatorioProdutosEstoque.html">Produtos em Estoque</a></li>
-                            <li><a href="relatorioProdutosEntregues.html">Produtos Entregues</a></li>
-                            <li><a href="relatorioPedidosCozinha.html">Pedidos da Cozinha</a></li>
-                            <li><a href="relatorioSaidaProdutos.html">Saída de Produtos</a></li>
+                            <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li>
+                            <li><a href="relatorioMonitoramentoAlteracoes.php">Monitoramento de Alterações</a></li>
+                            <li><a href="relatorioProdutosEstoque.php">Produtos em Estoque</a></li>
+                            <li><a href="relatorioProdutosEntregues.php">Produtos Entregues</a></li>
+                            <li><a href="relatorioPedidosCozinha.php">Pedidos da Cozinha</a></li>
+                            <li><a href="relatorioSaidaProdutos.php">Saída de Produtos</a></li>
                         </ul>
                     </li>
                 </ul>
