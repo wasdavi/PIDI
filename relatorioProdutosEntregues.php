@@ -18,7 +18,7 @@
                     <li><a href="registroAquisicoes.php">Aquisições</a></li>
                     <li><a href="#">Relatórios</a>
                         <ul>
-                            <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li>
+                            <!-- <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li> -->
                             <li><a href="relatorioMonitoramentoAlteracoes.php">Monitoramento de Alterações</a></li>
                             <li><a href="relatorioProdutosEstoque.php">Produtos em Estoque</a></li>
                             <li><a href="relatorioProdutosEntregues.php">Produtos Entregues</a></li>

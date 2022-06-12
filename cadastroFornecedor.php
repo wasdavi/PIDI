@@ -1,22 +1,4 @@
 
-<?php
-
-function insert(){if(isset($_POST['submit'])){
-
-include_once('config.php');
-
-$nome = $_POST['nome'];
-$cnpj = $_POST['cnpj'];
-$endereco = $_POST['endereco'];
-$telefone = $_POST['telefone'];
-$data_cadastro = $_POST['data_cadastro'];
-$selecao_produto = $_POST['selecao_produto'];
-$selecao_transporte = $_POST['selecao_transporte'];
-
-$result = mysqli_query($conexao, "INSERT INTO fornecedor(nomeFornecedor,cnpj,endereco,telefone,data_cadastro,tipoProduto,tipoTransporte) VALUES('$nome','$cnpj','$endereco','$telefone','$data_cadastro','$selecao_produto','$selecao_transporte')");
-}
-}
-?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -38,7 +20,7 @@ $result = mysqli_query($conexao, "INSERT INTO fornecedor(nomeFornecedor,cnpj,end
                 <li><a href="registroAquisicoes.php">Aquisições</a></li>
                 <li><a href="#">Relatórios</a>
                     <ul>
-                        <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li>
+                        <!-- <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li> -->
                         <li><a href="relatorioMonitoramentoAlteracoes.php">Monitoramento de Alterações</a></li>
                         <li><a href="relatorioProdutosEstoque.php">Produtos em Estoque</a></li>
                         <li><a href="relatorioProdutosEntregues.php">Produtos Entregues</a></li>
@@ -97,12 +79,12 @@ $result = mysqli_query($conexao, "INSERT INTO fornecedor(nomeFornecedor,cnpj,end
                             <option value="agua">Água</option>
                         </optgroup>
                         <optgroup label="Comidas">
-                            <option value="hamburguer">Hamburguer</option>
+                            <option value="hamburguer" >Hamburguer</option>
                             <option value="pao">Pão</option>
                         </optgroup>
                     </select>
                     <label for="" id="tipo">Tipo de Transporte:</label>
-                    <select name="selecao_transporte" id="selecao_transporte" required>
+                    <select name="selecao_transporte" id="selecao_transporte">
                         <option value="#"></option>
                         <option value="caminhao">Caminhão</option>
                         <option value="van">Van</option>
@@ -111,8 +93,7 @@ $result = mysqli_query($conexao, "INSERT INTO fornecedor(nomeFornecedor,cnpj,end
                 </div>
                 <br><br>
                 <div class="inputbotom">
-                    <input type="submit" name="submit" id="submit" value="Salvar" <?php insert();?>>
-                    <!-- <input type="submit" name="submit" id="submit" value="Salvar"> -->
+                    <input type="submit" name="submit" id="submit" value="Salvar">
                     <input type="submit" name="submit" id="submit" value="Consultar">
                     <input type="reset" name="limpar" id="submit" value="Limpar">
                 </div>

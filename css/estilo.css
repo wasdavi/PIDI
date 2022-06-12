@@ -263,6 +263,23 @@ legend{
 }
 
 
+#relatorio_pedidos_cozinha{
+    width: 70px;
+    border: 1px;
+    border-color: gray;
+}
 
+table{
+    width: 100%;
+    outline: none;
+}
+
+th, td{
+    border: 1px solid gray;
+}
+
+#tds{
+    text-align: center;
+}
 
 

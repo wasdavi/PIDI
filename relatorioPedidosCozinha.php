@@ -1,3 +1,14 @@
+<?php
+$pedidos_cozinha = [
+
+    ['Miguel', 'Hamburguer', '0001', '2', '2', '0', 'Atendido'],
+    ['Davi', 'Coca-cola', '0002', '3', '3', '0', 'Atendido'],
+    ['Weverson', 'Morango', '0003', '2', '1', '1', 'Pendente'],
+];
+
+?>
+
+
 <!DOCTYPE html>
     <html lang="pt-br">
     <head>
@@ -18,7 +29,7 @@
                     <li><a href="registroAquisicoes.php">Aquisições</a></li>
                     <li><a href="#">Relatórios</a>
                         <ul>
-                            <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li>
+                            <!-- <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li> -->
                             <li><a href="relatorioMonitoramentoAlteracoes.php">Monitoramento de Alterações</a></li>
                             <li><a href="relatorioProdutosEstoque.php">Produtos em Estoque</a></li>
                             <li><a href="relatorioProdutosEntregues.php">Produtos Entregues</a></li>
@@ -30,18 +41,44 @@
             </nav>
         </header>
         <div class="box">
-            <form action="">
                 <fieldset>
                     <legend><b>Pedidos da Cozinha</b> </legend>
-                    <br><br>
-                    <div class="inputdatasrelatorio">
-                    
-                       
-                    </div>
-                    <br><br>
+                    <br>
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Solicitante</th>
+                                <th>Produto</th>
+                                <th>Nº Pedido</th>
+                                <th>Qtd Solicitada</th>
+                                <th>Qtd Atendida</th>
+                                <th>Qtd Pendente</th>
+                                <th>Situação</th>
+
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                            <?php foreach($pedidos_cozinha as $pedidos): ?>
+                            <tr>
+                                <td><?= $pedidos[0] ?></td>
+                                <td id="tds"><?= $pedidos[1] ?></td>
+                                <td id="tds"><?= $pedidos[2] ?></td>
+                                <td id="tds"><?= $pedidos[3] ?></td>
+                                <td id="tds"><?= $pedidos[4] ?></td>
+                                <td id="tds"><?= $pedidos[5] ?></td>
+                                <td id="tds"><?= $pedidos[6] ?></td>
+                            </tr>
+
+                            <?php endforeach; ?>
+
+                        </tbody>
+                    </table>
                     
                 </fieldset>
-            </form>
         </div>
     </body>
     </html>

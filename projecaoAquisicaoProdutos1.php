@@ -1,3 +1,15 @@
+<?php
+$pedidos_cozinha = [
+
+    ['Hamburguer', '85', '96', '100', '73'],
+    ['Maionese', '15', '20', '25', '10'],
+    ['Pão', '85', '96', '100', '73'],
+    ['Queijo', '5', '10', '13', '3'],
+
+];
+
+?>
+
 <!DOCTYPE html>
     <html lang="pt-br">
     <head>
@@ -18,7 +30,7 @@
                     <li><a href="registroAquisicoes.php">Aquisições</a></li>
                     <li><a href="#">Relatórios</a>
                         <ul>
-                            <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li>
+                            <!-- <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li> -->
                             <li><a href="relatorioMonitoramentoAlteracoes.php">Monitoramento de Alterações</a></li>
                             <li><a href="relatorioProdutosEstoque.php">Produtos em Estoque</a></li>
                             <li><a href="relatorioProdutosEntregues.php">Produtos Entregues</a></li>
@@ -44,7 +56,6 @@
                         <!-- <input type="text" name="relProdEntr" id="relProdEntr" placeholder="Produto" class="inputUser" required>  -->
                        
                     </div>
-                    <br><br>
                     
                 </fieldset>
             </form>

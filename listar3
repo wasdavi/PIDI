@@ -1,0 +1,43 @@
+
+<ol>
+<?php
+include_once('config.php');
+
+$dados = mysqli_query($conexao, "SELECT * FROM fornecedor");
+?>
+<table>
+        <thead>
+            <tr>
+                <th>Cód. Fornecedor</th>
+                <th>Fornecedor</th>
+                <th>CNPJ</th>
+            </tr>
+        </thead>
+
+<tbody>
+<?php foreach($dados as $fornecedor): ?>
+<tr>
+						<td>
+						<?= $fornecedor['idFornecedor']?>
+						</td>
+						<td>
+						<?= $fornecedor['nomeFornecedor'] ?>
+						</td>
+						<td>
+						<?= $fornecedor['cnpj'] ?>
+						</td>
+						
+						<td>
+						<a
+							href="consultaProdutoEscolhido?produto.idProduto=${prod.idProduto}">altera</a>
+						</td>
+						<td><a
+							href="javascript:if(confirm('Deseja mesmo fazer a exclusão')) { location.href = 'apagaProduto?produto.idProduto=${prod.idProduto}';} ">excluir</a>
+						</td>
+					</tr>
+                    <?php endforeach; ?>
+
+                    </tbody>
+                </table>
+
+</ol>
