@@ -233,6 +233,14 @@ legend{
     background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(31, 147, 201));/*cor de fundo do botão*/
 }
 
+#projecao:hover{/*quando passar o mouse por cima do SUBMIT, vai alterar a cor*/
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(31, 147, 201));/*cor de fundo do botão*/
+}
+
+ #projecao:hover{/*quando passar o mouse por cima do SUBMIT, vai alterar a cor*/
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(31, 147, 201));/*cor de fundo do botão*/
+}
+
  .inputbotom{
     position: relative;
     display: flex;
@@ -240,7 +248,7 @@ legend{
     padding: 20px;
 }
 
-#entrar, #salvar_aquisicao{
+#entrar, #salvar_aquisicao, #projecao{
     background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));/*cor de fundo do botão*/
     padding: 10px;
     width: 20vh;
@@ -280,6 +288,10 @@ th, td{
 
 #tds{
     text-align: center;
+}
+
+#sitAtivo, #sitInativo{
+    padding-left: 8px;
 }
 
 

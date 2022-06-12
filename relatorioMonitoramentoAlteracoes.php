@@ -1,5 +1,5 @@
 <?php
-$pedidos_cozinha = [
+$monitora_alteracao = [
 
     ['Miguel', 'Estoquista', 'Hamburguer', 'Quantidade', '02/03/2022'],
     ['Davi', 'Gerente', 'Água', 'Quantidade', '05/03/2022'],
@@ -31,9 +31,9 @@ $pedidos_cozinha = [
                             <!-- <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li> -->
                             <li><a href="relatorioMonitoramentoAlteracoes.php">Monitoramento de Alterações</a></li>
                             <li><a href="relatorioProdutosEstoque.php">Produtos em Estoque</a></li>
-                            <li><a href="relatorioProdutosEntregues.php">Produtos Entregues</a></li>
+                            <li><a href="relatorioProdutosEntregues1.php">Produtos Entregues</a></li>
                             <li><a href="relatorioPedidosCozinha.php">Pedidos da Cozinha</a></li>
-                            <li><a href="relatorioSaidaProdutos.php">Saída de Produtos</a></li>
+                            <li><a href="relatorioSaidaProdutos1.php">Saída de Produtos</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -59,13 +59,13 @@ $pedidos_cozinha = [
                         </thead>
 
                         <tbody>
-                            <?php foreach($pedidos_cozinha as $pedidos): ?>
+                            <?php foreach($monitora_alteracao as $monitora): ?>
                             <tr>
-                                <td id="tds"><?= $pedidos[0] ?></td>
-                                <td id="tds"><?= $pedidos[1] ?></td>
-                                <td id="tds"><?= $pedidos[2] ?></td>
-                                <td id="tds"><?= $pedidos[3] ?></td>
-                                <td id="tds"><?= $pedidos[4] ?></td>
+                                <td id="tds"><?= $monitora[0] ?></td>
+                                <td id="tds"><?= $monitora[1] ?></td>
+                                <td id="tds"><?= $monitora[2] ?></td>
+                                <td id="tds"><?= $monitora[3] ?></td>
+                                <td id="tds"><?= $monitora[4] ?></td>
                             </tr>
 
                             <?php endforeach; ?>

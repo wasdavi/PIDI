@@ -1,3 +1,14 @@
+<?php
+$saida_produtos = [
+
+    ['Hamburguer', '48', 'R$ 0,50', '000015', 'ATM', 'davi.carvalho', '15/11/2021', '15'],
+    ['Refrigerante', '22', 'R$ 2,00', '000024', 'ATM', 'davi.carvalho', '11/11/2021', '07'],
+    ['', 'Total: 70', 'Média: 20,50', '', '', '', '', ''],
+
+];
+
+?>
+
 <!DOCTYPE html>
     <html lang="pt-br">
     <head>
@@ -5,7 +16,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Relatório de Produtos Entregues</title>
+    <title>Relatório de Saída de Produtos</title>
     </head>
     <body>
         <header>
@@ -21,9 +32,9 @@
                             <!-- <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li> -->
                             <li><a href="relatorioMonitoramentoAlteracoes.php">Monitoramento de Alterações</a></li>
                             <li><a href="relatorioProdutosEstoque.php">Produtos em Estoque</a></li>
-                            <li><a href="relatorioProdutosEntregues.php">Produtos Entregues</a></li>
+                            <li><a href="relatorioProdutosEntregues1.php">Produtos Entregues</a></li>
                             <li><a href="relatorioPedidosCozinha.php">Pedidos da Cozinha</a></li>
-                            <li><a href="relatorioSaidaProdutos.php">Saída de Produtos</a></li>
+                            <li><a href="relatorioSaidaProdutos1.php">Saída de Produtos</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -32,7 +43,7 @@
         <div class="box">
             <form action="">
                 <fieldset>
-                    <legend><b>Relatório de Produtos Entregues</b> </legend>
+                    <legend><b>Relatório de Saída de Produtos</b> </legend>
                     <br><br>
                     <div class="inputdatasrelatorio">
                     <label for="data_inicio"><b>Data de Início</b></label>
@@ -55,7 +66,42 @@
                             </optgroup>
                         </select>
                     </div>
-                    <br><br>
+                    <br>
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Produto</th>
+                                <th>Quantidade</th>
+                                <th>Valor</th>
+                                <th>Nota Fiscal</th>
+                                <th>Fornecedor</th>
+                                <th>Usuário</th>
+                                <th>Data Saída</th>
+                                <th>Num Pedido</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+                            <?php foreach($saida_produtos as $saida): ?>
+                            <tr>
+                                <td><?= $saida[0] ?></td>
+                                <td id="tds"><?= $saida[1] ?></td>
+                                <td id="tds"><?= $saida[2] ?></td>
+                                <td id="tds"><?= $saida[3] ?></td>
+                                <td id="tds"><?= $saida[4] ?></td>
+                                <td id="tds"><?= $saida[5] ?></td>
+                                <td id="tds"><?= $saida[6] ?></td>
+                                <td id="tds"><?= $saida[7] ?></td>
+                            </tr>
+
+                            <?php endforeach; ?>
+
+                        </tbody>
+                    </table>        
+                    <br>
                     <div class="inputbotom">
                         <input type="submit" name="submit" id="submit" value="Estatísticas">
                     </div>

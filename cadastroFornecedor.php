@@ -23,9 +23,9 @@
                         <!-- <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li> -->
                         <li><a href="relatorioMonitoramentoAlteracoes.php">Monitoramento de Alterações</a></li>
                         <li><a href="relatorioProdutosEstoque.php">Produtos em Estoque</a></li>
-                        <li><a href="relatorioProdutosEntregues.php">Produtos Entregues</a></li>
+                        <li><a href="relatorioProdutosEntregues1.php">Produtos Entregues</a></li>
                         <li><a href="relatorioPedidosCozinha.php">Pedidos da Cozinha</a></li>
-                        <li><a href="relatorioSaidaProdutos.php">Saída de Produtos</a></li>
+                        <li><a href="relatorioSaidaProdutos1.php">Saída de Produtos</a></li>
                     </ul>
                 </li>
             </ul>
@@ -92,7 +92,15 @@
                     </select>
                 </div>
                 <br><br>
-                <div class="inputbotom">
+                <div class="inputbox">
+                <label for="">Situação:</label>
+                    <label for="ativo" id="sitAtivo">Ativo</label>
+                    <input type="radio" name="situacao" id="ativo" value="ativo" required>
+                    <label for="inativo" id="sitInativo">Inativo</label>
+                    <input type="radio" name="situacao" id="inativo" value="inativo" required>
+                </div>
+                <br>
+                <div class="inputbotom">                    
                     <input type="submit" name="submit" id="submit" value="Salvar">
                     <input type="submit" name="submit" id="submit" value="Consultar">
                     <input type="reset" name="limpar" id="submit" value="Limpar">

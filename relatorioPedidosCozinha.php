@@ -32,9 +32,9 @@ $pedidos_cozinha = [
                             <!-- <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li> -->
                             <li><a href="relatorioMonitoramentoAlteracoes.php">Monitoramento de Alterações</a></li>
                             <li><a href="relatorioProdutosEstoque.php">Produtos em Estoque</a></li>
-                            <li><a href="relatorioProdutosEntregues.php">Produtos Entregues</a></li>
+                            <li><a href="relatorioProdutosEntregues1.php">Produtos Entregues</a></li>
                             <li><a href="relatorioPedidosCozinha.php">Pedidos da Cozinha</a></li>
-                            <li><a href="relatorioSaidaProdutos.php">Saída de Produtos</a></li>
+                            <li><a href="relatorioSaidaProdutos1.php">Saída de Produtos</a></li>
                         </ul>
                     </li>
                 </ul>

@@ -1,10 +1,9 @@
 <?php
-$aquisicao_produtos = [
+$produtos_entregues = [
 
-    ['Hamburguer', '85', '96', '100', '73'],
-    ['Maionese', '15', '20', '25', '10'],
-    ['Pão', '85', '96', '100', '73'],
-    ['Queijo', '5', '10', '13', '3'],
+    ['Hamburguer', '15', 'R$ 0,50', 'Sim', '01/11/2021', '01/11/2023', '10/11/2021', '000015'],
+    ['Hamburguer', '22', 'R$ 1,00', 'Não', '05/10/2021', '05/10/2023', '03/10/2021', '000022'],
+    ['', 'Total: 37', 'Média: 0,79', '', '', '', '', ''],
 
 ];
 
@@ -17,7 +16,7 @@ $aquisicao_produtos = [
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Projeção para Aquisição de Produtos</title>
+    <title>Relatório de Produtos Entregues</title>
     </head>
     <body>
         <header>
@@ -44,7 +43,7 @@ $aquisicao_produtos = [
         <div class="box">
             <form action="">
                 <fieldset>
-                    <legend><b>Projeção para Aquisição de Produtos</b> </legend>
+                    <legend><b>Relatório de Produtos Entregues</b> </legend>
                     <br><br>
                     <div class="inputdatasrelatorio">
                     <label for="data_inicio"><b>Data de Início</b></label>
@@ -54,36 +53,58 @@ $aquisicao_produtos = [
                     <a href="#" id="lupa"><img src="img/lupa2.png" width="35"></a>
                         <br><br><br><br>
                         <!-- <input type="text" name="relProdEntr" id="relProdEntr" placeholder="Produto" class="inputUser" required>  -->
-                       
+                        <label for="" >Produto:</label>
+                        <select name="selecao_produtoRel" id="selecao_produtoRel" required>
+                            <option value="#"></option>
+                            <optgroup label="Bebidas">
+                                <option value="refrigerante">Refrigerante</option>
+                                <option value="agua">Água</option>
+                            </optgroup>
+                            <optgroup label="Comidas">
+                                <option value="hamburguer">Hamburguer</option>
+                                <option value="pao">Pão</option>
+                            </optgroup>
+                        </select>
                     </div>
+                    <br>
                     <table>
 
                         <thead>
 
                             <tr>
                                 <th>Produto</th>
-                                <th>01/2022</th>
-                                <th>02/2022</th>
-                                <th>03/2022</th>
-                                <th>04/2022</th>
+                                <th>Quantidade</th>
+                                <th>Valor</th>
+                                <th>Cumpr. Prazo</th>
+                                <th>Dt Entrega</th>
+                                <th>Dt Validade</th>
+                                <th>Dt Prevista</th>
+                                <th>Nota Fiscal</th>
                             </tr>
 
                         </thead>
 
                         <tbody>
-                            <?php foreach($aquisicao_produtos as $aquisicao): ?>
+                            <?php foreach($produtos_entregues as $entregues): ?>
                             <tr>
-                                <td><?= $aquisicao[0] ?></td>
-                                <td id="tds"><?= $aquisicao[1] ?></td>
-                                <td id="tds"><?= $aquisicao[2] ?></td>
-                                <td id="tds"><?= $aquisicao[3] ?></td>
-                                <td id="tds"><?= $aquisicao[4] ?></td>
+                                <td><?= $entregues[0] ?></td>
+                                <td id="tds"><?= $entregues[1] ?></td>
+                                <td id="tds"><?= $entregues[2] ?></td>
+                                <td id="tds"><?= $entregues[3] ?></td>
+                                <td id="tds"><?= $entregues[4] ?></td>
+                                <td id="tds"><?= $entregues[5] ?></td>
+                                <td id="tds"><?= $entregues[6] ?></td>
+                                <td id="tds"><?= $entregues[7] ?></td>
                             </tr>
 
                             <?php endforeach; ?>
 
                         </tbody>
-                    </table>                    
+                    </table>        
+                    <br>
+                    <div class="inputbotom">
+                        <input type="submit" name="submit" id="submit" value="Estatísticas">
+                    </div>
                 </fieldset>
             </form>
         </div>

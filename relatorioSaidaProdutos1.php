@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
     <html lang="pt-br">
     <head>
@@ -21,9 +23,9 @@
                             <!-- <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li> -->
                             <li><a href="relatorioMonitoramentoAlteracoes.php">Monitoramento de Alterações</a></li>
                             <li><a href="relatorioProdutosEstoque.php">Produtos em Estoque</a></li>
-                            <li><a href="relatorioProdutosEntregues.php">Produtos Entregues</a></li>
+                            <li><a href="relatorioProdutosEntregues1.php">Produtos Entregues</a></li>
                             <li><a href="relatorioPedidosCozinha.php">Pedidos da Cozinha</a></li>
-                            <li><a href="relatorioSaidaProdutos.php">Saída de Produtos</a></li>
+                            <li><a href="relatorioSaidaProdutos1.php">Saída de Produtos</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -39,7 +41,7 @@
                     <input type="date" name="data_inicio" id="data_inicio" placeholder="Início" required>
                     <label for="data_fim"><b>Data Fim</b></label>
                     <input type="date" name="data_fim" id="data_fim" placeholder="Fim" required>
-                    <a href="#" id="lupa"><img src="img/lupa2.png" width="35"></a>
+                    <a href="relatorioSaidaProdutos2.php" id="lupa"><img src="img/lupa2.png" width="35"></a>
                         <br><br><br><br>
                         <!-- <input type="text" name="relProdEntr" id="relProdEntr" placeholder="Produto" class="inputUser" required>  -->
                         <label for="" >Produto:</label>
@@ -50,12 +52,13 @@
                                 <option value="agua">Água</option>
                             </optgroup>
                             <optgroup label="Comidas">
-                                <option value="hamburguer">Hamburguer</option>
+                                <option value="hamburguer">Hamburguer </option>
                                 <option value="pao">Pão</option>
                             </optgroup>
                         </select>
                     </div>
-                    <br><br>
+          
+                    <br>
                     <div class="inputbotom">
                         <input type="submit" name="submit" id="submit" value="Estatísticas">
                     </div>

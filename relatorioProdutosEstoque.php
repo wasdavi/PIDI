@@ -1,5 +1,5 @@
 <?php
-$pedidos_cozinha = [
+$produtos_estoque = [
 
     ['Hamburguer', '15', '000111', 'Comida', '01/11/2021', '01/11/2023', 'davi.carvalho', '000015', 'ATM', 'R$ 0,50'],
     ['Refrigerante', '22', '000222', 'Bebida', '05/10/2021', '05/10/2023', 'davi.carvalho', '000022', 'ATM', 'R$ 1,00'],
@@ -31,9 +31,9 @@ $pedidos_cozinha = [
                             <!-- <li><a href="projecaoAquisicaoProdutos.php">Projeção para Aquisição de Produtos</a></li> -->
                             <li><a href="relatorioMonitoramentoAlteracoes.php">Monitoramento de Alterações</a></li>
                             <li><a href="relatorioProdutosEstoque.php">Produtos em Estoque</a></li>
-                            <li><a href="relatorioProdutosEntregues.php">Produtos Entregues</a></li>
+                            <li><a href="relatorioProdutosEntregues1.php">Produtos Entregues</a></li>
                             <li><a href="relatorioPedidosCozinha.php">Pedidos da Cozinha</a></li>
-                            <li><a href="relatorioSaidaProdutos.php">Saída de Produtos</a></li>
+                            <li><a href="relatorioSaidaProdutos1.php">Saída de Produtos</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -64,18 +64,19 @@ $pedidos_cozinha = [
                         </thead>
 
                         <tbody>
-                            <?php foreach($pedidos_cozinha as $pedidos): ?>
+                            <?php foreach($produtos_estoque as $produtos): ?>
                             <tr>
-                                <td><?= $pedidos[0] ?></td>
-                                <td id="tds"><?= $pedidos[1] ?></td>
-                                <td id="tds"><?= $pedidos[2] ?></td>
-                                <td id="tds"><?= $pedidos[3] ?></td>
-                                <td id="tds"><?= $pedidos[4] ?></td>
-                                <td id="tds"><?= $pedidos[5] ?></td>
-                                <td id="tds"><?= $pedidos[6] ?></td>
-                                <td id="tds"><?= $pedidos[7] ?></td>
-                                <td id="tds"><?= $pedidos[8] ?></td>
-                                <td id="tds"><?= $pedidos[9] ?></td>
+                                <td><?= $produtos[0] ?></td>
+                                <td id="tds"><?= $produtos[1] ?></td>
+                                <td id="tds"><?= $produtos[2] ?></td>
+                                <td id="tds"><?= $produtos[3] ?></td>
+                                <td id="tds"><?= $produtos[4] ?></td>
+                                <td id="tds"><?= $produtos[5] ?></td>
+                                <td id="tds"><?= $produtos[6] ?></td>
+                                <td id="tds"><?= $produtos[7] ?></td>
+                                <td id="tds"><?= $produtos[8] ?></td>
+                                <td id="tds"><?= $produtos[9] ?></td>
+                                <td><a href="#"><img src="img/lápis.png" width="35"></a></td>
                             </tr>
 
                             <?php endforeach; ?>
@@ -84,17 +85,14 @@ $pedidos_cozinha = [
                     </table>                                        
                     <br>
                     <div class="inputbotom">
-                        <input type="submit" name="submit" id="submit" value="Projeção" onclick="redireciona()">
-                        <input type="submit" name="submit" id="submit" value="Estatísticas">
-                        <button id="myButton" class="float-left submit-button" >Home</button>
+                    <a href="projecaoAquisicaoProdutos1.php">
+                            <input type="button" name="projecao" id="projecao" value="Projeções" />
+                    </a>
+                    <input type="submit" name="submit" id="submit" value="Estatísticas">                        
                     </div>
                 </fieldset>
             </form>
-            <script type="text/javascript">
-                document.getElementById("myButton").onclick = function () {
-                    location.href = "projecaoAquisicaoProdutos1.php";
-                };
-            </script>
+            
         </div>
     </body>
     </html>
