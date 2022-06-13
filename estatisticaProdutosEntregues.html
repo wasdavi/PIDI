@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Estatística dos Produtos Entregues</title>
+</head>
+<body>
+    <h1 >Estatística dos Produtos Entregues</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <br><br>
+    <div class="inputdatasrelatorio">
+        <label for="data_inicio"><b>Data de Início</b></label>
+        <input type="date" name="data_inicio" id="data_inicio" placeholder="Início" required>
+        <label for="data_fim"><b>Data Fim</b></label>
+        <input type="date" name="data_fim" id="data_fim" placeholder="Fim" required>
+        <a href="#" id="lupa"><img src="img/lupa2.png" width="35"></a>
+    </div>
+    <br>
+    <div>
+    <fieldset>
+        <legend>Estatística de Prazos Cumpridos</legend>
+        <canvas id="chart-one"></canvas>
+    </fieldset>
+    <fieldset>
+        <legend>Estatística de Produtos a Vencerem</legend>
+        <canvas id="chart-two"></canvas>
+    </fieldset>
+    </div>
+    <div>
+        <fieldset id="chart3">
+        <legend>Percentual de Aumento de Produtos Entregues</legend>
+        <canvas id="chart-three" height="50"></canvas>
+        </fieldset>
+    </div>
+    <script>
+        $(function(){
+    var optionsBar = {
+                      responsive: true,
+                      scales: {
+                          yAxes: [{
+                              ticks: {
+                                  beginAtZero:true
+                                  }
+                              }]
+                          }
+                      };
+  
+                  var dataBar = {
+                          labels: ["Cumpridos","Não cumpridos"], 
+                          datasets: [
+                            {
+                              label: "Quantidade", 
+                              backgroundColor :"rgba(255, 99, 132, 0.2)",                                                
+                              borderColor: "rgba(255,99,132,1)",
+                              borderWidth: 1,
+                              hoverBackgroundColor: 'red',
+                              hoverBorderColor: "rgba(255,99,132,1)",
+                              data: [15,4]
+                          }
+                        ]
+                      };
+  
+                  var optionsLine = {
+                      responsive: true,
+                      scales: {
+                          yAxes: [{
+                              ticks: {
+                                  beginAtZero:true
+                                  }
+                              }]
+                          }
+                  };
+  
+                  var dataLine = {
+                      labels: ['04/21','05/21','06/21','07/21','08/21','09/21','10/21','11/21','12/21'],
+                      datasets: [{
+                          label: "Qt de produtos a vencerem no período",
+                          fill: false,
+                          backgroundColor: "rgba(255,108,0,0.7)",
+                          borderColor: "rgba(255,108,0,1)",
+                          borderWidth: 1,
+                          data: [9,4,3,5,2,0,1,0,2]
+                      }]
+                  };
+  
+                  var optionsBar2 = {
+                      responsive: true,
+                      scales: {
+                          yAxes: [{
+                              ticks: {
+                                  beginAtZero:true
+                                  }
+                              }]
+                          }
+                      };
+  
+                  var dataBar2 = {
+                          labels: ['Compara anterior (R$)','Compra atual (R$)','% de aumento'], 
+                          datasets: [
+                            {
+                              label: "Hamburguer", 
+                              backgroundColor :"rgba(255, 99, 132, 0.2)",                                                
+                              borderColor: "rgba(255,99,132,1)",
+                              borderWidth: 1,
+                              hoverBackgroundColor: 'red',
+                              hoverBorderColor: "rgba(255,99,132,1)",
+                              data: [0.90,1.00,10]
+                          },
+                          {
+                              label: "Coca-cola",
+                              backgroundColor: "rgba(54, 162, 235, 0.2)",
+                              borderColor: "rgba(54, 162, 235, 1)",
+                              borderWidth: 1,
+                              hoverBackgroundColor: "rgba(0,130,229,0.9)",
+                              hoverBorderColor: "rgba(0,130,229,1)",
+                              data: [4.00,5.00,20]
+                          }
+                        ]
+                      };
+  
+  
+                  function gerarGraficos(){
+                      var ctx = document.getElementById("chart-one").getContext("2d");
+                      var BarChart = new Chart(ctx, {
+                          type: 'bar',
+                          data: dataBar,
+                          options: optionsBar
+                      });
+  
+                      var ctx2 = document.getElementById("chart-two").getContext("2d");
+                      var LineChart = new Chart(ctx2, {
+                          type: 'line',
+                          data: dataLine,
+                          options: optionsLine
+                      });
+  
+                      var ctx3 = document.getElementById("chart-three").getContext("2d");
+                      var BarChart2 = new Chart(ctx3, {
+                          type: 'bar',
+                          data: dataBar2,
+                          options: optionsBar2
+                      });
+                  }
+  
+  gerarGraficos();
+  })
+  
+    </script>
+
+    
+</body>
+</html>

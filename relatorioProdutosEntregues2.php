@@ -103,7 +103,9 @@ $produtos_entregues = [
                     </table>        
                     <br>
                     <div class="inputbotom">
-                        <input type="submit" name="submit" id="submit" value="Estatísticas">
+                        <a href="estatisticaProdutosEntregues.html" target="_blank">
+                            <input type="button" name="estatistica" id="estatistica" value="Estatísticas" />
+                    </a>
                     </div>
                 </fieldset>
             </form>

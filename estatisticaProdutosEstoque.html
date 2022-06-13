@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Estatística dos Produtos em Estoque</title>
+</head>
+<body>
+    <h1 >Estatística dos Produtos em Estoque</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <br><br>
+    <div class="inputdatasrelatorio">
+        <label for="data_inicio"><b>Data de Início</b></label>
+        <input type="date" name="data_inicio" id="data_inicio" placeholder="Início" required>
+        <label for="data_fim"><b>Data Fim</b></label>
+        <input type="date" name="data_fim" id="data_fim" placeholder="Fim" required>
+        <a href="#" id="lupa"><img src="img/lupa2.png" width="35"></a>
+    </div>
+    <br>
+    <div>
+    <fieldset>
+        <legend>Despesas Mensais</legend>
+        <canvas id="chart-one"></canvas>
+    </fieldset>
+    <fieldset>
+        <legend>Prod. a Vencerem</legend>
+        <canvas id="chart-two"></canvas>
+    </fieldset>
+    </div>
+    <div>
+        <fieldset id="chart3">
+        <legend>Consumo Mensal</legend>
+        <canvas id="chart-three" height="50"></canvas>
+        </fieldset>
+    </div>
+    <script>
+        $(function(){
+    var optionsBar = {
+                      responsive: true,
+                      scales: {
+                          yAxes: [{
+                              ticks: {
+                                  beginAtZero:true
+                                  }
+                              }]
+                          }
+                      };
+  
+                  var dataBar = {
+                          labels: ["jan/21","fev/21","mar/21","abr/21"], 
+                          datasets: [
+                            {
+                              label: "Valor R$", 
+                              backgroundColor :"rgba(255, 99, 132, 0.2)",                                                
+                              borderColor: "rgba(255,99,132,1)",
+                              borderWidth: 1,
+                              hoverBackgroundColor: 'red',
+                              hoverBorderColor: "rgba(255,99,132,1)",
+                              data: [250,400,150,600]
+                          }
+                        ]
+                      };
+  
+                  var optionsLine = {
+                      responsive: true,
+                      scales: {
+                          yAxes: [{
+                              ticks: {
+                                  beginAtZero:true
+                                  }
+                              }]
+                          }
+                  };
+  
+                  var dataLine = {
+                      labels: ['03/06/21','03/07/21','03/08/21','03/09/21'],
+                      datasets: [{
+                          label: "Qt produtos a vencerem",
+                          fill: false,
+                          backgroundColor: "rgba(255,108,0,0.7)",
+                          borderColor: "rgba(255,108,0,1)",
+                          borderWidth: 1,
+                          data: [4,2,3,1]
+                      }]
+                  };
+  
+                  var optionsBar2 = {
+                      responsive: true,
+                      scales: {
+                          yAxes: [{
+                              ticks: {
+                                  beginAtZero:true
+                                  }
+                              }]
+                          }
+                      };
+  
+                  var dataBar2 = {
+                          labels: ['jan/21','fev/21','mar/21','abr/21'], 
+                          datasets: [
+                            {
+                              label: "Hamburguer", 
+                              backgroundColor :"rgba(255, 99, 132, 0.2)",                                                
+                              borderColor: "rgba(255,99,132,1)",
+                              borderWidth: 1,
+                              hoverBackgroundColor: 'red',
+                              hoverBorderColor: "rgba(255,99,132,1)",
+                              data: [33,18,26,5]
+                          },
+                          {
+                              label: "Maionese",
+                              backgroundColor: "rgba(54, 162, 235, 0.2)",
+                              borderColor: "rgba(54, 162, 235, 1)",
+                              borderWidth: 1,
+                              hoverBackgroundColor: "blue",
+                              hoverBorderColor: "rgba(0,130,229,1)",
+                              data: [30,10,20,8]
+                          },
+                          {
+                              label: "Pão",
+                              backgroundColor: "rgba(255, 206, 86, 0.2)",
+                              borderColor: "rgba(255, 206, 86, 1)",
+                              borderWidth: 1,
+                              hoverBackgroundColor: "yellow",
+                              hoverBorderColor: "rgba(0,130,229,1)",
+                              data: [15,25,17,11]
+                          },
+                          {
+                              label: "Queijo",
+                              backgroundColor: "rgba(75, 192, 192, 0.2)",
+                              borderColor: "rgba(75, 192, 192, 1)",
+                              borderWidth: 1,
+                              hoverBackgroundColor: "green",
+                              hoverBorderColor: "rgba(0,130,229,1)",
+                              data: [12,22,13,6]
+                          }
+                        ]
+                      };
+  
+  
+                  function gerarGraficos(){
+                      var ctx = document.getElementById("chart-one").getContext("2d");
+                      var BarChart = new Chart(ctx, {
+                          type: 'bar',
+                          data: dataBar,
+                          options: optionsBar
+                      });
+  
+                      var ctx2 = document.getElementById("chart-two").getContext("2d");
+                      var LineChart = new Chart(ctx2, {
+                          type: 'line',
+                          data: dataLine,
+                          options: optionsLine
+                      });
+  
+                      var ctx3 = document.getElementById("chart-three").getContext("2d");
+                      var BarChart2 = new Chart(ctx3, {
+                          type: 'bar',
+                          data: dataBar2,
+                          options: optionsBar2
+                      });
+                  }
+  
+  gerarGraficos();
+  })
+  
+    </script>
+
+    
+</body>
+</html>

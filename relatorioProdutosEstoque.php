@@ -88,7 +88,9 @@ $produtos_estoque = [
                     <a href="projecaoAquisicaoProdutos1.php">
                             <input type="button" name="projecao" id="projecao" value="Projeções" />
                     </a>
-                    <input type="submit" name="submit" id="submit" value="Estatísticas">                        
+                        <a href="estatisticaProdutosEstoque.html" target="_blank">
+                            <input type="button" name="estatistica" id="estatistica" value="Estatísticas" />
+                    </a>
                     </div>
                 </fieldset>
             </form>

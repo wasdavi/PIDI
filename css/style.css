@@ -1,0 +1,36 @@
+div{
+    width: 20%;
+    display: flex;
+    /* justify-content: space-around; */
+}
+
+fieldset, div{
+    width: 100%;
+}
+
+
+
+legend{
+    border: 1px solid;/*o BORDER-COLOR não funciona aqui*/
+    padding: 5px; /*aumenta o espaço da borda em relação a legenda*/
+    text-align: center;/*centraliza a legenda*/
+    background-color: none;/*cor de fundo da legenda*/
+}
+
+h1{
+    text-align: center;
+}
+
+
+.inputdatasrelatorio{
+    padding: 15px;
+    color: gray;
+    align-items: center;
+}
+
+#data_inicio, #data_fim{
+    width: 30%;
+    padding: 8px;
+    margin-left: 15px;
+    margin-right: 25px;
+}

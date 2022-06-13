@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Estatística Saída de Produtos</title>
+</head>
+<body>
+    <h1 >Estatística Saída de Produtos</h1>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+    <div>
+    <fieldset>
+        <legend>Projeção de Saída</legend>
+        <canvas id="chart-one"></canvas>
+    </fieldset>
+    <fieldset>
+        <legend>Estatística de Saída de Produtos - Total/Média</legend>
+        <canvas id="chart-two" height="200"></canvas>
+    </fieldset>
+    </div>
+    
+    <script>
+        $(function(){
+    var optionsBar = {
+                      responsive: true,
+                      scales: {
+                          yAxes: [{
+                              ticks: {
+                                  beginAtZero:true
+                                  }
+                              }]
+                          }
+                      };
+  
+                  var dataBar = {
+                          labels: ["Queijo","Alface","Bacon","Refrigerante","Hamburguer"], 
+                          datasets: [
+                            {
+                              label: "Quantidade", 
+                              backgroundColor :"gray",                                                
+                              borderColor: "black",
+                              borderWidth: 1,
+                              hoverBackgroundColor: ['green', 'blue', 'yellow', 'orange','red'],
+                              hoverBorderColor: ['green', 'blue', 'yellow', 'orange','red'],
+                              data: [55,33,45,30,50]
+                          }
+                        ]
+                      };
+  
+                  var optionsDoughnut = {
+                      responsive: true,
+                    //   scales: {
+                    //       yAxes: [{
+                    //           ticks: {
+                    //               beginAtZero:true
+                    //               }
+                    //           }]
+                    //       }
+                  };
+  
+                  var dataDoughnut = {
+                          labels: ["Média","Total"], 
+                          datasets: [
+                            {
+                              label: "Quantidade", 
+                              backgroundColor :['green','orange'],                                                
+                              borderColor: 'white',
+                              borderWidth: 6,
+                              hoverBackgroundColor: ['green','orange'],
+                              hoverBorderColor: ['green','orange'],
+                              data: [20.5,70]
+                          }
+                        ]
+                      };
+    
+  
+                  function gerarGraficos(){
+                      var ctx = document.getElementById("chart-one").getContext("2d");
+                      var BarChart = new Chart(ctx, {
+                          type: 'bar',
+                          data: dataBar,
+                          options: optionsBar
+                      });
+  
+                      var ctx2 = document.getElementById("chart-two").getContext("2d");
+                      var LineChart = new Chart(ctx2, {
+                        //   type: 'doughnut',
+                          type: 'pie',
+                          data: dataDoughnut,
+                          options: optionsDoughnut
+                      });
+                  }
+  
+  gerarGraficos();
+  })
+  
+</script>
+
+    
+</body>
+</html>
